@@ -4,15 +4,23 @@ namespace ParcelCalculator.AppLayer
 {
     public class DeliveryCostCalculator
     {
-        public static Result Calculate(int weight, int height, int width, int depth)
+        private IParcelFactory _parcelFactory;
+        private IValidator _validator;
+
+        public DeliveryCostCalculator(IParcelFactory parcelFactory, IValidator validator)
         {
-            var parcel = ParcelFactory.GetParcel(weight, height, width, depth);
+            _parcelFactory = parcelFactory;
+            _validator = validator;
+        }
+        public Result Calculate(int weight, int height, int width, int depth)
+        {
+            var parcel = _parcelFactory.GetParcel(weight, height, width, depth);
             return new Result { Cost = parcel.DeliveryCost, Category = parcel.Category.ToString() };
         }
 
-        public static Result Calculate(string weight, string height, string width, string depth)
+        public Result Calculate(string weight, string height, string width, string depth)
         {
-            var result = Validator.CheckValues(weight, height, width, depth);
+            var result = _validator.CheckValues(weight, height, width, depth);
             if (!result.IsValid)
             {
                 return new Result { Error = result.Error };

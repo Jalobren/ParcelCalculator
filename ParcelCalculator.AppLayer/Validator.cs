@@ -4,9 +4,14 @@ using System.Text;
 
 namespace ParcelCalculator.AppLayer
 {
-    public class Validator
+    public interface IValidator
     {
-        public static ValidatorResult CheckValues(string weight, string height, string width, string depth)
+        ValidatorResult CheckValues(string weight, string height, string width, string depth);
+    }
+
+    public class Validator : IValidator
+    {
+        public ValidatorResult CheckValues(string weight, string height, string width, string depth)
         {
             int intValue = -1;
             var errorMsg = new StringBuilder();

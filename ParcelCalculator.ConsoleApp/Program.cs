@@ -18,7 +18,8 @@ namespace ParcelCalculator.ConsoleApp
                 Console.Write("Enter Depth in cm: ");
                 var depth = Console.ReadLine();
 
-                var result = DeliveryCostCalculator.Calculate(weight, height, width, depth);
+                var costCalculator = new DeliveryCostCalculator(new ParcelFactory(), new Validator());
+                var result = costCalculator.Calculate(weight, height, width, depth);
                 if (!string.IsNullOrEmpty(result.Error))
                 {
                     Console.WriteLine(result.Error);

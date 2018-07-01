@@ -6,9 +6,13 @@ using System.Text;
 
 namespace ParcelCalculator.AppLayer
 {
-    public class ParcelFactory
+    public interface IParcelFactory
     {
-        public static IParcel GetParcel(int weight, int height, int width, int depth)
+        IParcel GetParcel(int weight, int height, int width, int depth);
+    }
+    public class ParcelFactory : IParcelFactory
+    {
+        public IParcel GetParcel(int weight, int height, int width, int depth)
         {
             var dimension = new ParcelDimension(weight,height, width, depth);
             if (weight > 50)
