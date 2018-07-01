@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelCalculator.Domain", "ParcelCalculator.Domain\ParcelCalculator.Domain.csproj", "{FA262186-AED1-4DAD-A71B-2D50BF24C254}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelCalculator.AppLayer", "ParcelCalculator.AppLayer\ParcelCalculator.AppLayer.csproj", "{83D62762-41C4-4415-91E8-5FBE8278A74B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParcelCalculator.ConsoleApp", "ParcelCalculator.ConsoleApp\ParcelCalculator.ConsoleApp.csproj", "{31C9CFF4-555C-4EC2-8D91-BD1F49937E48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FA262186-AED1-4DAD-A71B-2D50BF24C254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA262186-AED1-4DAD-A71B-2D50BF24C254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA262186-AED1-4DAD-A71B-2D50BF24C254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D62762-41C4-4415-91E8-5FBE8278A74B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D62762-41C4-4415-91E8-5FBE8278A74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D62762-41C4-4415-91E8-5FBE8278A74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D62762-41C4-4415-91E8-5FBE8278A74B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C9CFF4-555C-4EC2-8D91-BD1F49937E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C9CFF4-555C-4EC2-8D91-BD1F49937E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C9CFF4-555C-4EC2-8D91-BD1F49937E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C9CFF4-555C-4EC2-8D91-BD1F49937E48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
