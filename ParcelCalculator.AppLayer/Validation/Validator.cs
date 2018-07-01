@@ -17,22 +17,22 @@ namespace ParcelCalculator.AppLayer
             var errorMsg = new StringBuilder();
             var hasError = false;
             errorMsg.Append("The following values are invalid:");
-            if (!int.TryParse(weight, out intValue))
+            if (!int.TryParse(weight, out intValue) || intValue < 0)
             {
                 errorMsg.Append(" Weight,");
                 hasError = true;
             }
-            if (!int.TryParse(height, out intValue))
+            if (!int.TryParse(height, out intValue) || intValue < 0)
             {
                 errorMsg.Append(" Height,");
                 hasError = true;
             }
-            if (!int.TryParse(width, out intValue))
+            if (!int.TryParse(width, out intValue) || intValue < 0)
             {
                 errorMsg.Append(" Width,");
                 hasError = true;
             }
-            if (!int.TryParse(depth, out intValue))
+            if (!int.TryParse(depth, out intValue) || intValue < 0)
             {
                 errorMsg.Append(" Depth,");
                 hasError = true;

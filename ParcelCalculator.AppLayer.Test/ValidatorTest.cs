@@ -42,5 +42,17 @@ namespace ParcelCalculator.AppLayer.Test
             Assert.AreEqual(expected.IsValid, result.IsValid);
             Assert.IsNotNull(expected.Error, result.Error);
         }
+
+        [TestMethod]
+        public void Validator_CheckValues_Fail_NegativeValues()
+        {
+            var validator = new Validator();
+            var expected = new ValidatorResult() { IsValid = false, Error = "The following values are invalid: Width" };
+
+            var result = validator.CheckValues("12", "1", "-10", "20");
+
+            Assert.AreEqual(expected.IsValid, result.IsValid);
+            Assert.IsNotNull(expected.Error, result.Error);
+        }
     }
 }
